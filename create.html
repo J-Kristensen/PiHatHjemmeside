@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Opret Bruger</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Box Color #28a745 -->
+        <h1>Create</h1>
+        <div class="form-group col">
+            <div class="col-4">
+                <input type="text" id="addFirstName" class="form-control" v-model="addData.firstName"
+                    placeholder="First Name">
+                <input type="text" id="addLastName" class="form-control" v-model="addData.lastName"
+                    placeholder="Last Name">
+                <input type="text" id="addEmail" class="form-control" v-model="addData.email" placeholder="Email">
+                <input type="text" id="addMobileNumber" class="form-control" v-model="addData.mobileNumber"
+                    placeholder="Mobile Number">
+                <button id="addUser" class="btn btn-danger" v-on:click="addUser()">Add</button>
+            </div>
+        </div>
+    </div>
+    <script src="create.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Regnskab</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Box Color #28a745 Eller en anden farve-->
+        <h1>Regnskab</h1>
+        
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="accountinglist">
+                <tr v-for="accounting in allAccountings">
+                    <td>{{ accounting.id }}</td>
+                    <td>{{ accounting.userId }}</td>
+                    <td>{{ accounting.type }}</td>
+                    <td>{{ accounting.amount }}</td>
+                </tr>
+            </tbody>
+        </table>        
+        
+    </div>
+    <script src="accounting.js"></script>
+</body>
+
+</html>
