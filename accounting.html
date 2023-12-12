@@ -12,28 +12,33 @@
 
 <body>
     <div id="app">
-        <!-- Box Color #28a745 Eller en anden farve-->
         <h1>Regnskab</h1>
-        
+        <input placeholder="Navn" type="text" v-model="firstName" v-on:keyup.enter="filterByName(firstName)">
+        <button v-on:click="filterByName(firstName)" class="btn btn-primary">Filter</button>
+        <th>
+            <button v-on:click="sumOfAmount()">Sum</button>
+            <td>{{ totalSum }}</td>
+        </th>  
         <table class="table">
             <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
-                    <th>User ID</th>
+                    <th>Bruger ID</th>
+                    <th>Navn</th>
                     <th>Type</th>
-                    <th>Amount</th>
-                </tr>
+                    <th>Pris (Dkr)</th>
+                </tr> 
             </thead>
-            <tbody id="accountinglist">
-                <tr v-for="accounting in allAccountings">
+            <tbody id="accountinglist" :key="firstName">
+                <tr v-for="accounting in accountings" :key="accounting.id">
                     <td>{{ accounting.id }}</td>
                     <td>{{ accounting.userId }}</td>
+                    <td>{{ getUserName(accounting.userId) }}</td>
                     <td>{{ accounting.type }}</td>
                     <td>{{ accounting.amount }}</td>
                 </tr>
-            </tbody>
+            </tbody>            
         </table>        
-        
     </div>
     <script src="accounting.js"></script>
 </body>
