@@ -1,27 +1,29 @@
 body {
-    background-color: #4169E1;
-}
-
-.container {
-    height: 200px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.custom-btn {
-    padding: 20px 40px; /* Juster padding efter behov */
-    font-size: 1.5rem; /* Juster fontstørrelsen efter behov */
-}
-
-.center {
-    margin: 0;
-    position: absolute;
-    top: 140%; /* Juster efter behov */
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-/* Tilføj yderligere tilpasninger efter behov */
+    background-image : url('Img/Background2.png');
+    background-size: cover;
+    }
+    
+    .container {
+        height: 200px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .custom-btn {
+        padding: 20px 40px; /* Juster padding efter behov */
+        font-size: 1.5rem; /* Juster fontstørrelsen efter behov */
+    }
+    
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 140%; /* Juster efter behov */
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    
+    /* Tilføj yderligere tilpasninger efter behov */
+    
