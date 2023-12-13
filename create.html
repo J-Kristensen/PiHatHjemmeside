@@ -10,25 +10,43 @@
     <title>Opret Bruger</title>
 </head>
 
+
+<style>
+
+    body {
+        background-image : url('Img/Background2.png');
+        background-size: cover;
+        }
+    
+    </style>
+
 <body>
-    <div id="app">
+    <div id="app" style="width:30%;  margin-left: auto; margin-right: auto;">
         <!-- Box Color #28a745 -->
-        <h1>Create</h1>
-        <div class="form-group col">
-            <div class="col-4 d-flex flex-column">
+        <h1 style="color: white; text-align: center;transform: translateY(240%)">Opret bruger</h1>
+        <div class="form-group col" style="transform: translateY(120%)">
+            <div class="col-12 d-flex flex-column">
                 <input type="text" id="addFirstName" class="form-control" v-model="addData.firstName"
                     placeholder="Fornavn">
                 <input type="text" id="addLastName" class="form-control" v-model="addData.lastName"
                     placeholder="Efternavn">
                 <input type="text" id="addEmail" class="form-control" v-model="addData.email" placeholder="Email">
                 <div class="d-flex justify-content-center align-items-center">
-                    +45&nbsp;
-                    <input type="text" id="addMobileNumber" class="form-control" v-model="addData.mobileNumber"
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          +45
+                        </button>
+                        
+                      </div>
+                    <input type="text" id="addMobileNumber" style="width: 140px;" class="form-control" v-model="addData.mobileNumber"
                         placeholder="Telefonnummer">
 
-                </div>
+                        
 
-                <button id="addUser" class="btn btn-danger" v-on:click="addUser()">Add</button>
+                </div>
+                <div style="text-align: right">
+                <button id="addUser" class="btn btn-success" v-on:click="addUser()" style="width: 65px;">Opret</button>
+            </div>
             </div>
         </div>
     </div>
