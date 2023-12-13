@@ -75,6 +75,9 @@ Vue.createApp({
             // Opdater totalSum direkte
             this.totalSum = totalAmount;
             console.log("Sum of Prices: ", totalAmount);
-        },         
+        },
+        getDate(date) {
+            return new Date(date).toLocaleDateString();
+        }         
     },
 }).mount("#app");

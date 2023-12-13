@@ -1,7 +1,4 @@
-body {
-    background-image : url('Img/Background2.png');
-    background-size: cover;
-    }
+
     
     .container {
         height: 200px;
@@ -24,6 +21,12 @@ body {
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
+
+.stripedtable, tr:nth-child(odd) {
+    background-color: #d3c9c9;
+  } 
+    
+.thd, th {background-color: white;}
     
     /* Tilføj yderligere tilpasninger efter behov */
     
