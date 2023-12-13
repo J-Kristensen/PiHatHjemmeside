@@ -17,17 +17,17 @@
         <div class="form-group col">
             <div class="col-4 d-flex flex-column">
                 <input type="text" id="addFirstName" class="form-control" v-model="addData.firstName"
-                    placeholder="First Name">
+                    placeholder="Fornavn">
                 <input type="text" id="addLastName" class="form-control" v-model="addData.lastName"
-                    placeholder="Last Name">
+                    placeholder="Efternavn">
                 <input type="text" id="addEmail" class="form-control" v-model="addData.email" placeholder="Email">
                 <div class="d-flex justify-content-center align-items-center">
-                    +45&nbsp;  
+                    +45&nbsp;
                     <input type="text" id="addMobileNumber" class="form-control" v-model="addData.mobileNumber"
-                    placeholder="Mobile Number">
+                        placeholder="Telefonnummer">
 
                 </div>
-                
+
                 <button id="addUser" class="btn btn-danger" v-on:click="addUser()">Add</button>
             </div>
         </div>
