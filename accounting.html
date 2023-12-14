@@ -28,12 +28,12 @@
             </tr>
             <tr>
                 <td>
-                    <input placeholder="Navn" type="text" v-model="firstName" v-on:keyup.enter="filterByName(firstName)" style="vertical-align: middle;" > &nbsp;
-                    <button v-on:click="filterByName(firstName)" class="btn btn-secondary">Filter</button>
+                    <input placeholder="Navn" type="text" id="addFilter" v-model="firstName" v-on:keyup.enter="filterByName(firstName)" style="vertical-align: middle;" > &nbsp;
+                    <button id="buttonFilter" v-on:click="filterByName(firstName)" class="btn btn-secondary">Filter</button>
                 </td>
                 <td style="text-align: right;">
                     {{ totalSum }} DKK
-                    <button v-on:click="sumOfAmount()" class="btn btn-secondary">Sum</button>
+                    <button id="sumButton" v-on:click="sumOfAmount()" class="btn btn-secondary">Sum</button>
             
                 </td>
             </tr>
