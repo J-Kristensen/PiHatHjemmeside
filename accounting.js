@@ -14,10 +14,6 @@ Vue.createApp({
         await this.getAll(baseUrl);
         await this.getAll(userUrl);
     },
-    mounted() {
-        // Opdaterer brugernavne, så de er tilgængelige, når komponenten er monteret
-        this.updateUserNames();
-    },
     methods: {
         async getAll(url) {
             try {
