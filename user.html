@@ -20,34 +20,29 @@
                     <h1>Brugere</h1>
                 </td>
                 <td style="text-align: right;">
-                    
-                     <a href="https://nice-rock-09b5d2203.4.azurestaticapps.net/" class="btn btn-secondary" >
-                        <img src="Img/RocketRideLogo.png" style="height: 70px; width: auto;">
-                    </a> 
+                    <a href="https://nice-rock-09b5d2203.4.azurestaticapps.net/" class="btn btn-secondary">
+                        <img alt="RocketRideLogo" src="Img/RocketRideLogo.png" style="height: 70px; width: auto;">
+                    </a>
                 </td>
             </tr>
         </table>
 
-        
-          
         <table class="table-striped" style="width:50%;  margin-left: auto; margin-right: auto;">
             <thead class="thd">
                 <tr>
-                    
                     <th>Bruger ID</th>
                     <th>Fulde navn</th>
                     <th>Kode</th>
-                </tr> 
+                </tr>
             </thead>
             <tbody id="userlist">
                 <tr v-for="user in allUsers">
-                   
                     <td>{{ user.id }}</td>
                     <td>{{ user.firstName }} {{ user.lastName }}</td>
                     <td>{{ user.password }}</td>
                 </tr>
-            </tbody>            
-        </table>        
+            </tbody>
+        </table>
     </div>
     <script src="accounting.js"></script>
 </body>
