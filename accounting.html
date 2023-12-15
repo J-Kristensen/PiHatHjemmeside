@@ -14,54 +14,48 @@
 
 <body>
     <div id="app">
-        <table class="table" style="width:50%;  margin-left: auto; margin-right: auto;">
+        <table class="table" style="width:50%; margin-left: auto; margin-right: auto;">
             <tr>
                 <td style="vertical-align: middle;">
                     <h1>Regnskab</h1>
                 </td>
                 <td style="text-align: right;">
-                    
-                     <a href="https://nice-rock-09b5d2203.4.azurestaticapps.net/" class="btn btn-secondary" >
-                        <img src="Img/RocketRideLogo.png" style="height: 70px; width: auto;">
-                    </a> 
+                    <a href="https://nice-rock-09b5d2203.4.azurestaticapps.net/" class="btn btn-secondary">
+                        <img src="Img/RocketRideLogo.png" alt="RocketRideLogo" style="height: 70px; width: auto;">
+                    </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input placeholder="Navn" type="text" id="addFilter" v-model="firstName" v-on:keyup.enter="filterByName(firstName)" style="vertical-align: middle;" > &nbsp;
-                    <button id="buttonFilter" v-on:click="filterByName(firstName)" class="btn btn-secondary">Filter</button>
+                    <input placeholder="Navn" type="text" id="addFilter" v-model="firstName" @input="filterByName($event.target.value)" style="vertical-align: middle;"> &nbsp;
                 </td>
                 <td style="text-align: right;">
-                    {{ totalSum }} DKK
-                    <button id="sumButton" v-on:click="sumOfAmount()" class="btn btn-secondary">Sum</button>
+                    {{ totalSum }}
+                    <button id="sumButton" @click="sumOfAmount" class="btn btn-secondary">Sum</button>
                 </td>
             </tr>
         </table>
 
-        
-          
-        <table class="table-striped" style="width:50%;  margin-left: auto; margin-right: auto;">
+        <table class="table-striped" style="width:50%; margin-left: auto; margin-right: auto;">
             <thead class="thd">
                 <tr>
-                    
                     <th>Bruger ID</th>
                     <th>Navn</th>
                     <th>Dato</th>
                     <th>Type</th>
                     <th>Pris (DKK)</th>
-                </tr> 
+                </tr>
             </thead>
-            <tbody id="accountinglist" :key="firstName">
+            <tbody id="accountinglist">
                 <tr v-for="accounting in accountings" :key="accounting.id">
-                   
                     <td>{{ accounting.userId }}</td>
                     <td>{{ getUserName(accounting.userId) }}</td>
                     <td>{{ getDate(accounting.date) }}</td>
                     <td>{{ accounting.type }}</td>
                     <td>{{ accounting.amount }}</td>
                 </tr>
-            </tbody>            
-        </table>        
+            </tbody>
+        </table>
     </div>
     <script src="accounting.js"></script>
 </body>
