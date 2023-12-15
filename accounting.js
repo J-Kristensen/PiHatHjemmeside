@@ -8,6 +8,7 @@ Vue.createApp({
             accountings: [],
             allUsers: [],
             totalSum: 0,
+            firstName: "", // Add firstName to data
         };
     },
     async created() {
