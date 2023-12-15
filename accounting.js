@@ -32,23 +32,27 @@ Vue.createApp({
             const user = this.allUsers.find(user => user.id === userId);
             return user ? user.firstName : "";
         },
-        async filterByName(firstName) {
-            console.log("Filtering by name:", firstName);
+        updateFirstName(event) {
+            this.firstName = event.target.value;
+            this.filterByName();
+        },
+        filterByName() {
+            console.log("Filtering by name:", this.firstName);
 
-            if (!firstName.trim()) {
+            if (!this.firstName.trim()) {
                 this.accountings = [...this.allAccountings];
                 this.totalSum = this.sumOfAmount();
                 return;
             }
 
-            const user = this.allUsers.find(user => user.firstName === firstName);
+            const user = this.allUsers.find(user => user.firstName === this.firstName);
 
             if (user) {
                 this.accountings = this.allAccountings.filter(accounting => accounting.userId === user.id);
                 console.log("Filtered accountings:", this.accountings);
                 this.totalSum = this.sumOfAmount();
             } else {
-                console.warn("User not found with the name:", firstName);
+                console.warn("User not found with the name:", this.firstName);
                 this.accountings = [];
                 this.totalSum = 0;
             }
