@@ -27,8 +27,8 @@
             </tr>
             <tr>
                 <td>
-                    <input placeholder="Navn" type="text" id="addFilter"
-                     @input="updateFirstName" style="vertical-align: middle;"> &nbsp;
+                    <input placeholder="Navn" type="text" id="addFilter" @input="updateFirstName"
+                        style="vertical-align: middle;"> &nbsp;
                 </td>
                 <td style="text-align: right;">
                     {{ totalSum }}
@@ -48,14 +48,16 @@
                 </tr>
             </thead>
             <tbody id="accountinglist">
-                <tr v-for="accounting in accountings" :key="accounting.id">
-                    <td>{{ accounting.userId }}</td>
-                    <td>{{ getUserName(accounting.userId) }}</td>
-                    <td>{{ getDate(accounting.date) }}</td>
-                    <td>{{ accounting.type }}</td>
-                    <td>{{ accounting.amount }}</td>
-                </tr>
-            </tbody>
+                <template v-for="accounting in accountings">
+                    <tr :key="accounting.id">
+                        <td>{{ accounting.userId }}</td>
+                        <td>{{ getUserName(accounting.userId) }}</td>
+                        <td>{{ getDate(accounting.date) }}</td>
+                        <td>{{ accounting.type }}</td>
+                        <td>{{ accounting.amount }}</td>
+                    </tr>
+                </template>
+            </tbody>                                                       
         </table>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
