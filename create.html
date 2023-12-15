@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
@@ -12,21 +13,21 @@
 
 
 <body class="body">
-    <div id="app" class="container mt-5">
+    <div id="app" class="container1 mt-5">
         <!-- Box Color #28a745 -->
         <h1 class="text-white text-center">Opret bruger</h1>
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="form-group">
-                    <input type="text" id="addFirstName" class="form-control" v-model="addData.firstName"
+                    <input type="text" id="addFirstName" class="form-control"
                         placeholder="Fornavn">
                 </div>
                 <div class="form-group">
-                    <input type="text" id="addLastName" class="form-control" v-model="addData.lastName"
+                    <input type="text" id="addLastName" class="form-control"
                         placeholder="Efternavn">
                 </div>
                 <div class="form-group">
-                    <input type="text" id="addEmail" class="form-control" v-model="addData.email" placeholder="Email">
+                    <input type="text" id="addEmail" class="form-control" placeholder="Email">
                 </div>
                 <div class="form-group">
                     <div class="input-group">
@@ -37,7 +38,7 @@
                             </button>
                             <!-- Add your dropdown items here if needed -->
                         </div>
-                        <input type="text" id="addMobileNumber" class="form-control" v-model="addData.mobileNumber"
+                        <input type="text" id="addMobileNumber" class="form-control"
                             placeholder="Telefonnummer">
                     </div>
                 </div>
